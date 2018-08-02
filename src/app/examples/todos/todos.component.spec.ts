@@ -9,14 +9,14 @@ import { Store } from '@ngrx/store';
 
 import { TestStore, TestingModule } from '@testing/utils';
 
-import { TodosComponent } from './todos.component';
+import { TodosComponent } from '@app/examples/todos/todos.component';
 import {
   ActionTodosAdd,
   ActionTodosFilter,
   ActionTodosToggle,
   ActionTodosRemoveDone,
   TodosState
-} from './todos.reducer';
+} from '@app/examples/todos/todos.reducer';
 
 describe('TodosComponent', () => {
   let component: TodosComponent;

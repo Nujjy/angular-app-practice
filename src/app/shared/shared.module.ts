@@ -21,16 +21,16 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
-import { BigInputComponent } from './big-input/big-input.component';
-import { BigInputActionComponent } from './big-input/big-input-action.component';
+import { BigInputComponent } from '@app/shared/big-input/big-input.component';
+import { BigInputActionComponent } from '@app/shared/big-input/big-input-action.component';
+import { HttpClientModule } from '@angular/common/http';
+import { SentenceClassificationService } from '@app/shared/services/classification.service';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
-
     TranslateModule,
-
     MatButtonModule,
     MatToolbarModule,
     MatSelectModule,
@@ -46,9 +46,11 @@ import { BigInputActionComponent } from './big-input/big-input-action.component'
     MatIconModule,
     MatTooltipModule,
     MatSnackBarModule,
-    MatSlideToggleModule
+    MatSlideToggleModule,
+    HttpClientModule
   ],
   declarations: [BigInputComponent, BigInputActionComponent],
+  providers: [SentenceClassificationService],
   exports: [
     CommonModule,
     FormsModule,

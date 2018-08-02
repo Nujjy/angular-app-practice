@@ -24,7 +24,7 @@ import {
   ActionSettingsPersist,
   ActionSettingsChangeLanguage,
   ActionSettingsChangeAnimationsPageDisabled
-} from './settings';
+} from '@app/settings';
 
 @Component({
   selector: 'anms-root',
@@ -46,7 +46,9 @@ export class AppComponent implements OnInit, OnDestroy {
   navigation = [
     { link: 'about', label: 'anms.menu.about' },
     { link: 'features', label: 'anms.menu.features' },
-    { link: 'examples', label: 'anms.menu.examples' }
+    { link: 'examples', label: 'anms.menu.examples' },
+    { link: 'document-analysis', label: 'anms.menu.document-analysis' }
+
   ];
   navigationSideMenu = [
     ...this.navigation,

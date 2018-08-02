@@ -3,9 +3,9 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { CoreModule } from '@app/core';
 import { TestingModule } from '@testing/utils';
 
-import { ExamplesModule } from '../examples.module';
+import { ExamplesModule } from '@app/examples/examples.module';
 
-import { StockMarketComponent } from './stock-market.component';
+import { StockMarketComponent } from '@app/examples/stock-market/stock-market.component';
 
 describe('StockMarketComponent', () => {
   let component: StockMarketComponent;

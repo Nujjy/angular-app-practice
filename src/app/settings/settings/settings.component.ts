@@ -12,7 +12,7 @@ import {
   ActionSettingsChangeAnimationsElements,
   SettingsState,
   ActionSettingsPersist
-} from '../settings.reducer';
+} from '@app/settings/settings.reducer';
 
 @Component({
   selector: 'anms-settings',

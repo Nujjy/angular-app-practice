@@ -16,7 +16,7 @@ import {
   Todo,
   TodosFilter,
   TodosState
-} from './todos.reducer';
+} from '@app/examples/todos/todos.reducer';
 
 @Component({
   selector: 'anms-todos',

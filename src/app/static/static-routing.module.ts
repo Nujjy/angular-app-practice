@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { AboutComponent } from './about/about.component';
-import { FeaturesComponent } from './features/features.component';
+import { AboutComponent } from '@app/static/about/about.component';
+import { FeaturesComponent } from '@app/static/features/features.component';
+import { DocumentAnalysisComponent } from '@app/static/document-analysis/document-analysis.component';
 
 const routes: Routes = [
   {
@@ -14,6 +15,11 @@ const routes: Routes = [
     path: 'features',
     component: FeaturesComponent,
     data: { title: 'anms.menu.features' }
+  },
+  {
+    path: 'document-analysis',
+    component: DocumentAnalysisComponent,
+    data: { title: 'anms.menu.document-analysis' }
   }
 ];
 
