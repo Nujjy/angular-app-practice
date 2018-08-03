@@ -45,9 +45,8 @@ export class AppComponent implements OnInit, OnDestroy {
   languages = ['en', 'sk'];
   navigation = [
     { link: 'about', label: 'anms.menu.about' },
-    { link: 'features', label: 'anms.menu.features' },
-    { link: 'examples', label: 'anms.menu.examples' },
-    { link: 'document-analysis', label: 'anms.menu.document-analysis' }
+    { link: 'analyzed-document', label: 'anms.menu.document-analysis' },
+    { link: 'upload', label: 'anms.menu.upload' }
 
   ];
   navigationSideMenu = [
@@ -96,11 +95,6 @@ export class AppComponent implements OnInit, OnDestroy {
     this.store.dispatch(new ActionAuthLogout());
   }
 
-  onLanguageSelect({ value: language }) {
-    this.store.dispatch(new ActionSettingsChangeLanguage({ language }));
-    this.store.dispatch(new ActionSettingsPersist({ settings: this.settings }));
-  }
-
   private subscribeToIsAuthenticated() {
     this.store
       .select(selectorAuth)
@@ -122,7 +116,6 @@ export class AppComponent implements OnInit, OnDestroy {
       .subscribe(settings => {
         this.settings = settings;
         this.setTheme(settings);
-        this.setLanguage(settings);
         this.animationService.updateRouteAnimationType(
           settings.pageAnimations,
           settings.elementsAnimations
@@ -148,19 +141,8 @@ export class AppComponent implements OnInit, OnDestroy {
     classList.add(effectiveTheme);
   }
 
-  private setLanguage(settings: SettingsState) {
-    const { language } = settings;
-    if (language) {
-      this.translate.use(language);
-    }
-  }
-
   private subscribeToRouterEvents() {
     this.router.events.pipe(takeUntil(this.unsubscribe$)).subscribe(event => {
-      if (event instanceof ActivationEnd) {
-        this.titleService.setTitle(event.snapshot);
-      }
-
       if (event instanceof NavigationEnd) {
         AppComponent.trackPageView(event);
       }

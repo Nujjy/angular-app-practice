@@ -4,7 +4,7 @@
   "anms.header.github": "Project Github Repository",
   "anms.footer.changelog": "Show changelog",
   "anms.menu.about": "About",
-  "anms.menu.features": "Features",
+  "anms.menu.document-analysis": "Document Analysis",
   "anms.menu.examples": "Examples",
   "anms.menu.settings": "Settings",
   "anms.menu.login": "Sign in",
@@ -16,7 +16,7 @@
   "anms.about.get-notified.follow": "Follow",
   "anms.about.get-notified.description":
     "a Twitter bot that helps you to stay up to date with releases of popular frontend frameworks & libraries!",
-  "anms.features.title": "Features",
+  "anms.document-analysis.title": "Document Analysis",
   "anms.features.documentation": "Docs",
   "anms.features.guide": "Guide",
   "anms.features.angular": "Modern powerful framework",

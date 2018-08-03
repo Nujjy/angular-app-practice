@@ -2,8 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
-import { TranslateModule } from '@ngx-translate/core';
-
+import { HttpClientModule } from '@angular/common/http';
 import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatMenuModule } from '@angular/material/menu';
@@ -21,10 +20,14 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
+import { TranslateModule } from '@ngx-translate/core';
+import { StoreModule } from '@ngrx/store';
+
 import { BigInputComponent } from '@app/shared/big-input/big-input.component';
 import { BigInputActionComponent } from '@app/shared/big-input/big-input-action.component';
-import { HttpClientModule } from '@angular/common/http';
-import { SentenceClassificationService } from '@app/shared/services/classification.service';
+
+import { InMemoryDocumentService } from '@app/shared/services/in-memory-document.service';
+import { analyzedDocuments } from '@app/static/analyzed-document/analyzed-document.reducer';
 
 @NgModule({
   imports: [
@@ -47,10 +50,12 @@ import { SentenceClassificationService } from '@app/shared/services/classificati
     MatTooltipModule,
     MatSnackBarModule,
     MatSlideToggleModule,
-    HttpClientModule
+    HttpClientModule,
+    StoreModule.forFeature('analyzedDocuments', analyzedDocuments),
+
   ],
   declarations: [BigInputComponent, BigInputActionComponent],
-  providers: [SentenceClassificationService],
+  providers: [InMemoryDocumentService],
   exports: [
     CommonModule,
     FormsModule,
