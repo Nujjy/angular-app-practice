@@ -71,24 +71,12 @@ h2 {
     z-index: 0;
   }
 
-  .gradient {
-    &::before {
-      position: absolute;
-      top: 50%;
-      left: 0;
-      bottom: 0;
-      right: 0;
-      content: '';
-      z-index: 0;
-    }
-  }
-
   .container {
     position: relative;
   }
 }
 
-.follow-releases {
+.about-me {
   max-width: 700px;
   margin: 0 auto 80px auto;
 
@@ -98,15 +86,6 @@ h2 {
     a {
       border-bottom: 3px solid;
     }
-  }
-
-  img {
-    display: block;
-    max-width: 80%;
-    margin: 20px auto 0 auto;
-    border-radius: 5px;
-    box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2),
-      0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
   }
 }
 
@@ -119,7 +98,7 @@ h2 {
       width: auto;
     }
   }
-  .follow-releases {
+  .about-me {
     width: auto;
 
     img {
@@ -154,7 +133,7 @@ h2 {
     }
   }
 
-  .follow-releases {
+  .about-me {
     margin: 0 auto 40px auto;
   }
 }

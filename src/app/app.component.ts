@@ -47,7 +47,6 @@ export class AppComponent implements OnInit, OnDestroy {
     { link: 'about', label: 'anms.menu.about' },
     { link: 'analyzed-document', label: 'anms.menu.document-analysis' },
     { link: 'upload', label: 'anms.menu.upload' }
-
   ];
   navigationSideMenu = [
     ...this.navigation,
